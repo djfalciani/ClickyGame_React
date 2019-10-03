@@ -1,0 +1,74 @@
+[
+    {
+        "id":1,
+        "name": "Ana",
+        "image": "/images/Ana.png",
+        "clicked": false
+    },
+    {
+        "id":2,
+        "name": "Ashe",
+        "image": "/images/Ashe.png",
+        "clicked": false
+    },
+    {
+        "id":3,
+        "name": "Baptiste",
+        "image": "/images/Baptiste.png",
+        "clicked": false
+    },
+    {
+        "id":4,
+        "name": "Bastion",
+        "image": "/images/Bastion.png",
+        "clicked": false
+    },
+    {
+        "id":5,
+        "name": "Brigitte",
+        "image": "/images/Brigitte.png",
+        "clicked": false
+    },
+    {
+        "id":6,
+        "name": "DVA",
+        "image": "/images/DVA.png",
+        "clicked": false
+    },
+    {
+        "id":7,
+        "name": "Genji",
+        "image": "/images/Genji.png",
+        "clicked": false
+    },
+    {
+        "id":8,
+        "name": "Mercy",
+        "image": "/images/Mercy.png",
+        "clicked": false
+    },
+    {
+        "id":9,
+        "name": "Reaper",
+        "image": "/images/Reaper.png",
+        "clicked": false
+    },
+    {
+        "id":10,
+        "name": "Tracer",
+        "image": "/images/Tracer.png",
+        "clicked": false
+    },
+    {
+        "id":11,
+        "name": "Winston",
+        "image": "/images/Winston.png",
+        "clicked": false
+    },
+    {
+        "id":12,
+        "name": "Zenyatta",
+        "image": "/images/Zenyatta.png",
+        "clicked": false
+    }
+]

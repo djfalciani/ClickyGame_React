@@ -1,15 +1,8 @@
 import React from "react";
 import "./style.css";
-import GameCard from '../gameCard';
 
-function GameBoard() {
-  return (
-    <div className="container">
-      <div className="gameBoard">
-        <GameCard></GameCard>
-      </div>
-    </div>
-  );
+function GameBoard(props) {
+  return <div className="card-deck">{props.children}</div>
 }
 
 export default GameBoard;
