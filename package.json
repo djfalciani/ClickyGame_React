@@ -2,7 +2,7 @@
   "name": "clickygame-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://djfalciani.github.io/ClickyGameReact/",
+  "homepage": "https://djfalciani.github.io/ClickyGame_React/",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gh-pages": "^2.1.1",
