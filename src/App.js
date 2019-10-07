@@ -33,35 +33,29 @@ class App extends Component {
     return array;
   };
 
+  // Checks the card clicked value, if not clicked before we'll update value and then shuffle new array and update state...
   handleItemClick = id => {
-    console.log(id);
-    // const newArray = this.shuffleArray(this.state.data);
-    // let newArray = this.state.data[id-1];
-    let newArray = this.state.data;
-    let guessedCorrectly = false;
-
-    // console.log(newArray);
-
-    // check the clicked state. if true then alert user and reset game. If false then incremet score and set clicked to true...
-    newArray.map(e => {
-      if (e.id == id) {
-        // check state.clicked
-        if (!e.clicked) {
-          // User hasn't clicked it yet. so update the value and set iterator
-          e.clicked = true;
-          guessedCorrectly = true;
+      let guessedCorrect = false;
+      
+      let newData = this.state.data.map(item => {
+        const newItem = { ...item };
+        
+        if (newItem.id === id) {
+          if (!newItem.clicked) {
+            newItem.clicked = true;
+            guessedCorrect = true;
+          }
         }
-      }
-    });
+        return newItem;
+      })
+      
+      // Shuffle the array...
+      newData = this.shuffleArray(newData);
+      
+      // Update state w/New Array which has the clicked state set correctly...
+      this.setState({data: newData});
 
-    if (guessedCorrectly) {
-      this.handleCorrect();
-    } else {
-      this.handleIncorrect();
-    }
-
-    newArray = this.shuffleArray(newArray);
-    this.setState({data: newArray});
+      guessedCorrect ? this.handleCorrect() : this.handleIncorrect();
   };
 
   handleCorrect() {
@@ -72,7 +66,7 @@ class App extends Component {
   };
 
   handleIncorrect() {
-    alert("Bad Guess");
+    alert("Already clicked this card! Try again");
     this.setState({score: 0});
     this.resetData();
   };
@@ -87,12 +81,12 @@ class App extends Component {
     return (
       <React.Fragment>
         <Navbar
-          key={0}
+          //key={0}
           score={this.state.score}
           topScore={this.state.topScore}
         />
+        <Jumbotron></Jumbotron>
         <Wrapper>
-          <Jumbotron></Jumbotron>
           <GameBoard>
             {this.state.data.map(data => (
               <Gamecard
